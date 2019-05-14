@@ -109,7 +109,8 @@ export class App {
       scope: scope,
       response_type: AuthorizationRequest.RESPONSE_TYPE_CODE,
       state: undefined,
-      extras: {'prompt': 'consent', 'access_type': 'offline'}
+      extras: {'prompt': 'consent', 'access_type': 'offline'},
+      acr_values: undefined
     });
 
     if (this.configuration) {

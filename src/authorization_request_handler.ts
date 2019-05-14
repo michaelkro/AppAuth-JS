@@ -91,7 +91,8 @@ export abstract class AuthorizationRequestHandler {
       'client_id': request.clientId,
       'response_type': request.responseType,
       'state': request.state,
-      'scope': request.scope
+      'scope': request.scope,
+      'acr_values': request.acrValues
     };
 
     // copy over extras

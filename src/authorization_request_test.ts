@@ -28,7 +28,8 @@ describe('AuthorizationRequest Tests', () => {
     response_type: AuthorizationRequest.RESPONSE_TYPE_CODE,
     scope: scope,
     state: state,
-    extras: extras
+    extras: extras,
+    acr_values: undefined
   };
 
   let jsonRequest2: AuthorizationRequestJson = {
@@ -37,7 +38,8 @@ describe('AuthorizationRequest Tests', () => {
     response_type: AuthorizationRequest.RESPONSE_TYPE_CODE,
     scope: scope,
     state: undefined,
-    extras: extras
+    extras: extras,
+    acr_values: undefined
   };
 
   let jsonRequest3: AuthorizationRequestJson = {
@@ -46,7 +48,8 @@ describe('AuthorizationRequest Tests', () => {
     response_type: AuthorizationRequest.RESPONSE_TYPE_TOKEN,
     scope: scope,
     state: undefined,
-    extras: extras
+    extras: extras,
+    acr_values: undefined
   };
 
   let request: AuthorizationRequest = new AuthorizationRequest(jsonRequest);

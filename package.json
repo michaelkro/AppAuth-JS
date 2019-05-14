@@ -1,5 +1,5 @@
 {
-  "name": "@openid/appauth",
+  "name": "mikero/appauth",
   "version": "1.2.3",
   "description": "A general purpose OAuth client.",
   "author": "The OpenID Foundation",

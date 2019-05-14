@@ -11,6 +11,7 @@ export interface AuthorizationRequestJson {
     state?: string;
     extras?: StringMap;
     internal?: StringMap;
+    acr_values?: any;
 }
 /**
  * Represents the AuthorizationRequest.
@@ -29,6 +30,7 @@ export declare class AuthorizationRequest {
     state: string;
     extras?: StringMap;
     internal?: StringMap;
+    acrValues: string;
     /**
      * Constructs a new AuthorizationRequest.
      * Use a `undefined` value for the `state` parameter, to generate a random

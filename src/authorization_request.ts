@@ -27,6 +27,7 @@ export interface AuthorizationRequestJson {
   state?: string;
   extras?: StringMap;
   internal?: StringMap;
+  acr_values?: any;
 }
 
 /**
@@ -57,6 +58,7 @@ export class AuthorizationRequest {
   state: string;
   extras?: StringMap;
   internal?: StringMap;
+  acrValues: string;
   /**
    * Constructs a new AuthorizationRequest.
    * Use a `undefined` value for the `state` parameter, to generate a random
@@ -74,6 +76,7 @@ export class AuthorizationRequest {
     this.extras = request.extras;
     // read internal properties if available
     this.internal = request.internal;
+    this.acrValues = request.acr_values;
   }
 
   setupCodeVerifier(): Promise<void> {
@@ -113,7 +116,8 @@ export class AuthorizationRequest {
         scope: this.scope,
         state: this.state,
         extras: this.extras,
-        internal: this.internal
+        internal: this.internal,
+        acr_values: this.acrValues
       };
     });
   }
